@@ -30,7 +30,7 @@ Propose a model (class model) that:
 Solution
 ========
 
-Proposed model is shown below. Also, it has been made up and it's under the [php-model](TaxCal/blob/master/php-model) subfolder on this project.
+Proposed model can be seen on image below. Also, sample classes are under the **php-model** subfolder on this project.
 
 
 Class Model
@@ -174,6 +174,7 @@ Classes on the table below represent the repository.
 | Country             | List of countries (Lookup table)           |
 +---------------------+--------------------------------------------+
 
+### Additional Complexity
 
 Complex calculations can be extended by simply adding rows with additional information 
 about tax rates based on vendor location, buyer location, product classification.
@@ -189,3 +190,18 @@ Now the model would hold tax rate information by:
  * Vendor country, buyer country, buyer state
  * Vendor country, vendor state, buyer country, buyer state
  * Vendor/buyer country/state, product classification
+
+ 
+### Even More Complex
+
+Just to prove the point, The model above introduced extra variables to the tax calculation formula. 
+I haven't talked about it just yet.
+
+
+Certain countries support a different rate on special days of the year. For example, a Super Reduced tax rate on January 1st. If the system doesn't provide this functionality, somebody at the support team should be waiting to update tax information at midnight on New Year's Eve.
+
+Looking at the class model above, the TaxRate class contains two extra fields:
+ * ValidFromDate
+ * ValidToDate
+
+This will allow having a different tax rate for certain dates of the year without having support personnel around for it to happen.
