@@ -143,18 +143,18 @@ PHP Sample Response (Complex Calculation)
 About Scalability
 -----------------
 
-The usual approach on scalability for this type of situations where tax information can be added 
-at any time for additional countries is to create "resolvers". This way additional code is added
+The usual approach on scalability for this type of situations (where tax information can be added 
+at any time for additional countries) is to create "Resolvers". This way additional code is added
 and loaded dynamically as it seems necessary.
 
 For example:
 
-	A Tax Library: https://github.com/commerceguys/tax
+	Checkout a "Tax Library" at: https://github.com/commerceguys/tax
 
-However, I am going to take a different path. Scalability's been based on a data-driven approach.
+However, I am going to take a different path. Here, scalability's been based on a data-driven approach.
 
-A repository (which can be a database or, simply, a set of json/xml files) will hold detailed information on tax calculation 
-for each country or a combination of variables.
+A repository (which can be a database or, simply, a set of json/xml files) will hold detailed 
+information on tax calculation for each country plus a combination of optional variables.
 
 Classes on the table below represent the repository.
 
@@ -194,11 +194,13 @@ Now the model would hold tax rate information by:
  
 **Even More Complex!**
 
-Just to prove the point, The model above introduced extra variables to the tax calculation formula. 
+Just to prove the point, the model above introduced extra variables to the tax calculation formula. 
 I haven't talked about it just yet.
 
-
-Certain countries support a different rate on special days of the year. For example, a Super Reduced tax rate on January 1st. If the system doesn't provide this functionality, somebody at the support team should be waiting to update tax information at midnight on New Year's Eve.
+Certain countries support a different rate on special days of the year. 
+For example, a Super Reduced tax rate on January 1st. If the system doesn't provide this 
+functionality, somebody at the support team should be waiting to update tax information 
+at midnight on New Year's Eve.
 
 Looking at the class model above, the TaxRate class contains two extra fields:
  * ValidFromDate
@@ -211,7 +213,7 @@ Assumptions
 ===========
 
 * Vendor country always counts for tax calculation
-* Tax fee is always a percentage (not a specific amount) of the order/product monetary amount.
-* For cases when a country is tax exempt, simply put zero to the TaxPercentage fields.
-* Product name is irrelevant for the tax calculation, and thus, it was not included on the TaxRequestOrderItem
-* On cases on which country taxes and state taxes apply, TaxPercentage will hold the sum of both percentages.
+* Tax fee is always a percentage (not a fixed amount) of the order/product monetary amount.
+* For cases when a country is tax exempt, simply put zero to the *TaxPercentage* field.
+* Product name is irrelevant for the tax calculation, and thus, it was not included on the *TaxRequestOrderItem*
+* On cases on which both country taxes and state taxes apply, *TaxPercentage* will hold the sum of both percentages.
