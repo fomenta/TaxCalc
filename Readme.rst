@@ -21,9 +21,11 @@ Problem
 -------
 
 Propose a model (class model) that:
+
 * Can be used to calculate taxes for multiple countries 
 * Can be escalated easily. 
-NOTICE: You may include made up objects to help your task.
+
+*NOTICE*: made up objects may be included.
 
 Solution
 ========
@@ -35,6 +37,12 @@ Class Model
 -----------
 
 .. image:: Images/TaxCalculatorDiagram.png
+
+
+Entities
+--------
+
+
 
 
 
