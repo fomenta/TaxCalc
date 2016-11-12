@@ -10,12 +10,12 @@ Statement
 	* a simple calculation
 	* a fixed percentage
 * others:
-[x] use a sophisticated formula 
-[x] requires additional information
-		[x] product classification, 
-		[x] vendor location, 
-		[x] buyer location, 
-		[x] etc.
+	* use a sophisticated formula 
+	* requires additional information
+		* product classification, 
+		* vendor location, 
+		* buyer location, 
+		* etc.
 
 Problem
 -------
