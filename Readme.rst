@@ -151,7 +151,7 @@ For example:
 
 	A Tax Library: https://github.com/commerceguys/tax
 
-However, I am going to take a different path. The Scalability has been based on a data-driven approach.
+However, I am going to take a different path. Scalability's been based on a data-driven approach.
 
 A repository (which can be a database or, simply, a set of json/xml files) will hold detailed information on tax calculation 
 for each country or a combination of variables.
@@ -174,7 +174,7 @@ Classes on the table below represent the repository.
 | Country             | List of countries (Lookup table)           |
 +---------------------+--------------------------------------------+
 
-### Additional Complexity
+### Additional Complexity ###
 
 Complex calculations can be extended by simply adding rows with additional information 
 about tax rates based on vendor location, buyer location, product classification.
@@ -192,7 +192,7 @@ Now the model would hold tax rate information by:
  * Vendor/buyer country/state, product classification
 
  
-### Even More Complex
+### Even More Complex! ###
 
 Just to prove the point, The model above introduced extra variables to the tax calculation formula. 
 I haven't talked about it just yet.
