@@ -30,7 +30,7 @@ Propose a model (class model) that:
 Solution
 ========
 
-Proposed model is shown below.
+Proposed model is shown below. Also, it has been made up and it's under the [php-model](TaxCal/blob/master/php-model) subfolder on this project.
 
 
 Class Model
@@ -42,7 +42,7 @@ Class Model
 Tax Calculatation
 -----------------
 
-A tax will take care of getting order information and making the correct tax calculation based on the different variables
+The Tax Factory will take care of getting order information and making the correct tax calculation based on the different variables
 such as vendor/buyer location and/or product classification.
 
 +---------------------+--------------------------------------------+
@@ -143,7 +143,7 @@ PHP Sample Response (Complex Calculatation)
 About Scalability
 -----------------
 
-The usual approach on scalability for this type of situation where tax information can be added 
+The usual approach on scalability for this type of situations where tax information can be added 
 at any time for additional countries is to create "resolvers". This way additional code is added
 and loaded dynamically as it seems necessary.
 
@@ -151,7 +151,7 @@ For example:
 
 	Markup :  [A Tax Library](https://github.com/commerceguys/tax)
 
-However, I am going to take a different approach by making it data-driven.
+However, I am going to take a different path. The Scalability is based on a data-driven approach.
 
 A repository (which can be a database or, simply, a set of json/xml files) will hold detailed information on tax calculation 
 for each country or a combination of variables.
