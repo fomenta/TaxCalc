@@ -65,29 +65,13 @@ Below is a short description for the purpose of each entity.
 | TaxRepository       | Main class to access tax data repository   |
 +---------------------+--------------------------------------------+
 | TaxRate             | May hold tax rate information by:          |
-|                     |  * Country (from vendor)                   |
-|                     |  * Vendor country, Buyer country           |
+|                     |  * Vendor country                          |
+|                     |  * Vendor/buyer country                    |
 |                     |  * Vendor/buyer country, product tax type  |
 +---------------------+--------------------------------------------+
 | ProductTaxType      | Product tax classification (Lookup table)  |
+|                     | Example: Food, Drugs, Alcohol              |
 +---------------------+--------------------------------------------+
-| Country             | List of countriess (Lookup table)          |
+| Country             | List of countries (Lookup table)           |
 +---------------------+--------------------------------------------+
-
-
-+-------+----------+------+
-| Table Headings   | Here |
-+-------+----------+------+
-| Sub   | Headings | Too  |
-+=======+==========+======+
-| cell  | column spanning |
-+ spans +----------+------+
-| rows  | normal   | cell |
-+-------+----------+------+
-| multi | * cells can be  |
-| line  | * formatted     |
-| cells | * paragraphs    |
-| too   |                 |
-+-------+-----------------+
-
 
