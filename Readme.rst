@@ -42,6 +42,8 @@ Class Model
 Entities
 --------
 
+Below is a short description for the purpose of each entity.
+
 +--------------------+--------------------------------------------+
 |Entity              | Description                                |
 +====================+============================================+
