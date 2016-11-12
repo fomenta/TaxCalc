@@ -42,35 +42,35 @@ Class Model
 Entities
 --------
 
-==================== =============================================
-Entity               Description 
-==================== =============================================
-TaxFactory           Main class used to calculate tax information
--------------------- ---------------------------------------------
-TaxRequest			 Holds the order information needed to 
-                     calculate taxes.
--------------------- ---------------------------------------------
-TaxRequestAddress    information about full address (e.g. from a 
-                     vendor or buyer)
--------------------- ---------------------------------------------
-TaxRequestOrderItem  information about an order item
--------------------- ---------------------------------------------
-TaxResponse          Holds tax calculation details
--------------------- ---------------------------------------------
-TaxResponseItem      Information about calculations when taxes go
-                     to the level product.
--------------------- ---------------------------------------------
-TaxRepository        Main class to access tax data repository
--------------------- ---------------------------------------------
-TaxRate              May hold tax rate information by:
-                      * Country (from vendor)
-                      * Vendor country, Buyer country
-                      * Vendor/buyer country, product tax type
--------------------- ---------------------------------------------
-ProductTaxType       Product tax classification (Lookup table)
--------------------- ---------------------------------------------
-Country       		 List of countriess (Lookup table)
--------------------- ---------------------------------------------
+====================  =============================================
+Entity                Description 
+====================  =============================================
+TaxFactory            Main class used to calculate tax information
+--------------------  ---------------------------------------------
+TaxRequest			  Holds the order information needed to 
+                      calculate taxes.
+--------------------  ---------------------------------------------
+TaxRequestAddress     information about full address (e.g. from a 
+                      vendor or buyer)
+--------------------  ---------------------------------------------
+TaxRequestOrderItem   information about an order item
+--------------------  ---------------------------------------------
+TaxResponse           Holds tax calculation details
+--------------------  ---------------------------------------------
+TaxResponseItem       Information about calculations when taxes go
+                      to the level product.
+--------------------  ---------------------------------------------
+TaxRepository         Main class to access tax data repository
+--------------------  ---------------------------------------------
+TaxRate               May hold tax rate information by:
+                       * Country (from vendor)
+                       * Vendor country, Buyer country
+                       * Vendor/buyer country, product tax type
+--------------------  ---------------------------------------------
+ProductTaxType        Product tax classification (Lookup table)
+--------------------  ---------------------------------------------
+Country       		  List of countriess (Lookup table)
+--------------------  ---------------------------------------------
 
 
 
