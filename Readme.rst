@@ -80,74 +80,73 @@ PHP Sample Request
 --------------------
 ::
 
-TaxFactory.calculate({
-  OrderNumber: '123',
-  OrderAmount: 345.8,
-  OrderDate: '2016-11-11',
-  VendorAddress: {
-      Line1: '2340 5th Avenue',
-      City: 'New York',
-      State: 'NY',
-      PostalCode: '10118',
-      Country: 'US'
-	  },
-  BuyerAddress: {
-      line1: '300S Orange Ave',
-      city: 'Orlando',
-      state: 'NY',
-      postalCode: '32800',
-      country: 'US'
-	  },
-  OrderItems: [
-    {
-      Id: 1,
-      Quantity: 1,
-      UnitPrice: 45.2,
-      ProductTaxType: 'Food'
-    },
-    {
-      Id: 2,
-      Quantity: 1,
-      UnitPrice: 300.6,
-      ProductTaxType: 'Drugs'
-    }
-  ]
-});
+	TaxFactory.calculate({
+	  OrderNumber: '123',
+	  OrderAmount: 345.8,
+	  OrderDate: '2016-11-11',
+	  VendorAddress: {
+		  Line1: '2340 5th Avenue',
+		  City: 'New York',
+		  State: 'NY',
+		  PostalCode: '10118',
+		  Country: 'US'
+		  },
+	  BuyerAddress: {
+		  line1: '300S Orange Ave',
+		  city: 'Orlando',
+		  state: 'NY',
+		  postalCode: '32800',
+		  country: 'US'
+		  },
+	  OrderItems: [
+		{
+		  Id: 1,
+		  Quantity: 1,
+		  UnitPrice: 45.2,
+		  ProductTaxType: 'Food'
+		},
+		{
+		  Id: 2,
+		  Quantity: 1,
+		  UnitPrice: 300.6,
+		  ProductTaxType: 'Drugs'
+		}
+	  ]
+	});
 
 PHP Sample Response (Simple Calculatation)
 ------------------------------------------
-
 ::
 
-{
-  OrderNumber: '123',
-  OrderAmount: 345.8,
-  TaxFixedRate: 0.075,
-  TaxAmount: 25.935
-}
+	{
+	  OrderNumber: '123',
+	  OrderAmount: 345.8,
+	  TaxFixedRate: 0.075,
+	  TaxAmount: 25.935
+	}
 
 PHP Sample Response (Complex Calculatation)
 ------------------------------------------
 ::
 
-{
-  OrderNumber: '123',
-  OrderAmount: 345.8,
-  TaxFixedRate: 0,
-  TaxAmount: 26.308,
-  OrderItems: [
-    {
-      Id: 1,
-      ProductTaxType: 'Food'
-      TaxRate: 0.05,
-      TaxAmount: 2.26
-    },
-    {
-      Id: 2,
-      ProductTaxType: 'Drugs'
-      TaxRate: 0.08,
-      TaxAmount: 24.048
-    }
-  ]
-}
+	{
+	  OrderNumber: '123',
+	  OrderAmount: 345.8,
+	  TaxFixedRate: 0,
+	  TaxAmount: 26.308,
+	  OrderItems: [
+		{
+		  Id: 1,
+		  ProductTaxType: 'Food'
+		  TaxRate: 0.05,
+		  TaxAmount: 2.26
+		},
+		{
+		  Id: 2,
+		  ProductTaxType: 'Drugs'
+		  TaxRate: 0.08,
+		  TaxAmount: 24.048
+		}
+	  ]
+	}
 
