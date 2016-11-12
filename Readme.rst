@@ -25,7 +25,7 @@ Propose a model (class model) that:
 * Can be used to calculate taxes for multiple countries 
 * Can be escalated easily. 
 
-*NOTICE*: made up objects may be included.
+**NOTICE**: made up objects may be included.
 
 Solution
 ========
