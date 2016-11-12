@@ -49,6 +49,9 @@ Below is a short description for the purpose of each entity.
 +=====================+============================================+
 | TaxFactory          | Main class. Calculates tax information     |
 +---------------------+--------------------------------------------+
+| TaxRequest		  | Holds the order information needed to      |
+|                     | calculate taxes.                           |
++---------------------+--------------------------------------------+
 
 
 +-------+----------+------+
