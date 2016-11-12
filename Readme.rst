@@ -1,8 +1,8 @@
 International Tax Calculator
 ============================
 
-Statement
----------
+Problem
+-------
 
 * A company processes orders that are placed in multiple countries.
 	* Calculate country taxes.
@@ -17,8 +17,8 @@ Statement
 		* Buyer location 
 		* Etc.
 
-Problem
--------
+Statement
+---------
 
 Propose a model (class model) that:
 
