@@ -208,10 +208,10 @@ This will allow having a different tax rate for certain dates of the year withou
 
 
 Assumptions
------------
+===========
 
- * Vendor country always counts for tax calculation
- * Tax fee is always a percentage (not a specific value) of the order/product monetary amount.
- * For cases when a country is tax exempt, simply put zero to the TaxPercentage fields.
- * Product name is irrelevant for the tax calculation, and thus, it was not included on the TaxRequestOrderItem
- * On cases on which country taxes and state taxes apply, TaxPercentage will hold the sum of both percentages.
+* Vendor country always counts for tax calculation
+* Tax fee is always a percentage (not a specific value) of the order/product monetary amount.
+* For cases when a country is tax exempt, simply put zero to the TaxPercentage fields.
+* Product name is irrelevant for the tax calculation, and thus, it was not included on the TaxRequestOrderItem
+* On cases on which country taxes and state taxes apply, TaxPercentage will hold the sum of both percentages.
