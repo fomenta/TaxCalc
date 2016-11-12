@@ -39,7 +39,7 @@ Class Model
 .. image:: Images/TaxCalculatorDiagram.png
 
 
-Tax Calculatation
+Tax Calculation
 -----------------
 
 The Tax Factory will take care of receiving order information and making the correct tax calculation based on the different variables
@@ -103,7 +103,7 @@ PHP Sample Request
 	  ]
 	});
 
-PHP Sample Response (Simple Calculatation)
+PHP Sample Response (Simple Calculation)
 ------------------------------------------
 ::
 
@@ -114,7 +114,7 @@ PHP Sample Response (Simple Calculatation)
 	  TaxAmount: 25.935
 	}
 
-PHP Sample Response (Complex Calculatation)
+PHP Sample Response (Complex Calculation)
 ------------------------------------------
 ::
 
