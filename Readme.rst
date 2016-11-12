@@ -1,4 +1,4 @@
-Multi-Country Tax Calculator
+International Tax Calculator
 ============================
 
 Statement
@@ -6,11 +6,11 @@ Statement
 
 * A company processes orders that are placed in multiple countries.
 	* Calculate country taxes.
-* Some may use:
+* Some countries may use:
 	* A simple calculation
 	* A fixed percentage
-* others:
-	* Use a sophisticated formula 
+* Other countries user:
+	* A sophisticated formula 
 	* Requires additional information
 		* Product classification
 		* Vendor location
@@ -211,7 +211,7 @@ Assumptions
 ===========
 
 * Vendor country always counts for tax calculation
-* Tax fee is always a percentage (not a specific value) of the order/product monetary amount.
+* Tax fee is always a percentage (not a specific amount) of the order/product monetary amount.
 * For cases when a country is tax exempt, simply put zero to the TaxPercentage fields.
 * Product name is irrelevant for the tax calculation, and thus, it was not included on the TaxRequestOrderItem
 * On cases on which country taxes and state taxes apply, TaxPercentage will hold the sum of both percentages.
