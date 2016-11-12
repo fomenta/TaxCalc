@@ -174,10 +174,10 @@ Classes on the table below represent the repository.
 | Country             | List of countries (Lookup table)           |
 +---------------------+--------------------------------------------+
 
-### Additional Complexity ###
+**Additional Complexity**
 
 Complex calculations can be extended by simply adding rows with additional information 
-about tax rates based on vendor location, buyer location, product classification.
+about tax rates based on vendor location, buyer location, or product classification.
 
 Also, additional variables can be added to the formula. For instance, if calculations must be extended 
 at the State level (not only the Country) additional columns can be added to include State for 
@@ -192,7 +192,7 @@ Now the model would hold tax rate information by:
  * Vendor/buyer country/state, product classification
 
  
-### Even More Complex! ###
+**Even More Complex!**
 
 Just to prove the point, The model above introduced extra variables to the tax calculation formula. 
 I haven't talked about it just yet.
@@ -205,3 +205,13 @@ Looking at the class model above, the TaxRate class contains two extra fields:
  * ValidToDate
 
 This will allow having a different tax rate for certain dates of the year without having support personnel around for it to happen.
+
+
+Assumptions
+-----------
+
+ * Vendor country always counts for tax calculation
+ * Tax fee is always a percentage (not a specific value) of the order/product monetary amount.
+ * For cases when a country is tax exempt, simply put zero to the TaxPercentage fields.
+ * Product name is irrelevant for the tax calculation, and thus, it was not included on the TaxRequestOrderItem
+ * On cases on which country taxes and state taxes apply, TaxPercentage will hold the sum of both percentages.
