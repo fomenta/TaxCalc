@@ -49,28 +49,21 @@ Below is a short description for the purpose of each entity.
 +=====================+============================================+
 | TaxFactory          | Main class. Calculates tax information     |
 +---------------------+--------------------------------------------+
-| TaxRequest		  | Holds the order information needed to      |
-|                     | calculate taxes.                           |
-+---------------------+--------------------------------------------+
-| TaxRequestAddress   | information about full address (e.g. from  | 
-|                     | a vendor or a buyer)                       |
-+---------------------+--------------------------------------------+
-| TaxRequestOrderItem | information about an order item            |
-+---------------------+--------------------------------------------+
-| TaxResponse         | Holds tax calculation details              |
-+---------------------+--------------------------------------------+
-| TaxResponseItem     | Information about calculations when taxes  |
-|                     | go to the product level.                   |
-+---------------------+--------------------------------------------+
-| TaxRepository       | Main class to access tax data repository   |
-+---------------------+--------------------------------------------+
-| TaxRate             | May hold tax rate information by:          |
-|                     |  * Country (from vendor)                   |
-|                     |  * Vendor country, Buyer country           |
-|                     |  * Vendor/buyer country, product tax type  |
-+---------------------+--------------------------------------------+
-| ProductTaxType      | Product tax classification (Lookup table)  |
-+---------------------+--------------------------------------------+
-| Country             | List of countriess (Lookup table)          |
-+---------------------+--------------------------------------------+
+
+
++-------+----------+------+
+| Table Headings   | Here |
++-------+----------+------+
+| Sub   | Headings | Too  |
++=======+==========+======+
+| cell  | column spanning |
++ spans +----------+------+
+| rows  | normal   | cell |
++-------+----------+------+
+| multi | * cells can be  |
+| line  | * formatted     |
+| cells | * paragraphs    |
+| too   |                 |
++-------+-----------------+
+
 
