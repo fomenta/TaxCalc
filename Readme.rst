@@ -5,33 +5,34 @@ Statement
 ---------
 
 * A company processes orders that are placed in multiple countries.
-	* calculate country taxes.
+	* Calculate country taxes.
 * Some may use:
-	* a simple calculation
-	* a fixed percentage
+	* A simple calculation
+	* A fixed percentage
 * others:
-	* use a sophisticated formula 
-	* requires additional information
-		* product classification, 
-		* vendor location, 
-		* buyer location, 
-		* etc.
+	* Use a sophisticated formula 
+	* Requires additional information
+		* Product classification
+		* Vendor location
+		* Buyer location 
+		* Etc.
 
 Problem
 -------
 
 Propose a model (class model) that:
-- can be used to calculate taxes for multiple countries 
-- can be escalated easily. 
-NOTICE: You may include  made up objects to help your task.
+* Can be used to calculate taxes for multiple countries 
+* Can be escalated easily. 
+NOTICE: You may include made up objects to help your task.
 
 Solution
 ========
 
+Proposed model is shown below.
+
+
 Class Model
 -----------
-
-Proposed class model is shown below:
 
 .. image:: Images/TaxCalculatorDiagram.png
 
