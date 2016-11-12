@@ -42,7 +42,7 @@ Class Model
 Tax Calculatation
 -----------------
 
-The Tax Factory will take care of getting order information and making the correct tax calculation based on the different variables
+The Tax Factory will take care of receiving order information and making the correct tax calculation based on the different variables
 such as vendor/buyer location and/or product classification.
 
 +---------------------+--------------------------------------------+
