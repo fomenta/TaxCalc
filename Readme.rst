@@ -149,9 +149,9 @@ and loaded dynamically as it seems necessary.
 
 For example:
 
-	Markup :  [A Tax Library](https://github.com/commerceguys/tax)
+	A Tax Library: https://github.com/commerceguys/tax
 
-However, I am going to take a different path. The Scalability is based on a data-driven approach.
+However, I am going to take a different path. The Scalability has been based on a data-driven approach.
 
 A repository (which can be a database or, simply, a set of json/xml files) will hold detailed information on tax calculation 
 for each country or a combination of variables.
