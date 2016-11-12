@@ -4,7 +4,7 @@ Multi-Country Tax Calculator
 Statement
 ---------
 
-*	A company processes orders that are placed in multiple countries.
+* A company processes orders that are placed in multiple countries.
 	* calculate country taxes.
 * Some may use:
 	* a simple calculation
@@ -31,6 +31,10 @@ Solution
 Class Model
 -----------
 
+Proposed class model is shown below:
+
 .. image:: Images/TaxCalculatorDiagram.png
+
+
 
 
