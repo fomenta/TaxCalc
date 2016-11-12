@@ -39,10 +39,11 @@ Class Model
 .. image:: Images/TaxCalculatorDiagram.png
 
 
-Entities
---------
+Tax Calculatation
+-----------------
 
-The purpose of each entity is shown on the table below.
+A tax will take care of getting order information and making the correct tax calculation based on the different variables
+such as vendor/buyer location and/or product classification.
 
 +---------------------+--------------------------------------------+
 | Entity              | Description                                |
@@ -61,18 +62,6 @@ The purpose of each entity is shown on the table below.
 +---------------------+--------------------------------------------+
 | TaxResponseItem     | Information about calculations when taxes  |
 |                     | go to the product level.                   |
-+---------------------+--------------------------------------------+
-| TaxRepository       | Main class to access tax data repository   |
-+---------------------+--------------------------------------------+
-| TaxRate             | May hold tax rate information by:          |
-|                     |  * Vendor country                          |
-|                     |  * Vendor/buyer country                    |
-|                     |  * Vendor/buyer country, product tax type  |
-+---------------------+--------------------------------------------+
-| ProductTaxType      | Product tax classification (Lookup table). |
-|                     | Example: Food, Drugs, Alcohol              |
-+---------------------+--------------------------------------------+
-| Country             | List of countries (Lookup table)           |
 +---------------------+--------------------------------------------+
 
 
@@ -150,3 +139,53 @@ PHP Sample Response (Complex Calculatation)
 	  ]
 	}
 
+
+About Scalability
+-----------------
+
+The usual approach on scalability for this type of situation where tax information can be added 
+at any time for additional countries is to create "resolvers". This way additional code is added
+and loaded dynamically as it seems necessary.
+
+For example:
+
+	Markup :  [A Tax Library](https://github.com/commerceguys/tax)
+
+However, I am going to take a different approach by making it data-driven.
+
+A repository (which can be a database or, simply, a set of json/xml files) will hold detailed information on tax calculation 
+for each country or a combination of variables.
+
+Classes on the table below represent the repository.
+
++---------------------+--------------------------------------------+
+| Entity              | Description                                |
++=====================+============================================+
+| TaxRepository       | Main class to access tax data repository   |
++---------------------+--------------------------------------------+
+| TaxRate             | Holds tax rate information by:             |
+|                     |  * Vendor country                          |
+|                     |  * Vendor/buyer country                    |
+|                     |  * Vendor/buyer country, product tax type  |
++---------------------+--------------------------------------------+
+| ProductTaxType      | Product tax classification (Lookup table). |
+|                     | Example: Food, Drugs, Alcohol              |
++---------------------+--------------------------------------------+
+| Country             | List of countries (Lookup table)           |
++---------------------+--------------------------------------------+
+
+
+Complex calculations can be extended by simply adding rows with additional information 
+about tax rates based on vendor location, buyer location, product classification.
+
+Also, additional variables can be added to the formula. For instance, if calculations must be extended 
+at the State level (not only the Country) additional columns can be added to include State for 
+Vendor and Buyer (as optional fields)
+
+Now the model would hold tax rate information by:
+ * Vendor country                         
+ * Vendor country, buyer country
+ * Vendor country, vendor state, buyer country
+ * Vendor country, buyer country, buyer state
+ * Vendor country, vendor state, buyer country, buyer state
+ * Vendor/buyer country/state, product classification
