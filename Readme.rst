@@ -5,13 +5,13 @@ Statement
 ---------
 
 *	A company processes orders that are placed in multiple countries.
-	[x] calculate country taxes.
+	* calculate country taxes.
 * Some may use:
-	[x] a simple calculation
-	[x] a fixed percentage
+	* a simple calculation
+	* a fixed percentage
 * others:
-	[x] use a sophisticated formula 
-	[x] requires additional information
+[x] use a sophisticated formula 
+[x] requires additional information
 		[x] product classification, 
 		[x] vendor location, 
 		[x] buyer location, 
